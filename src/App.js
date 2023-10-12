@@ -1,15 +1,14 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Home from "./pages/home";
-import Movie from "./pages/movie";
+import { Outlet } from "react-router-dom";
+import Navbar from './components/Navbar';
+import Footer from './components/footer'
+
 
 const App = () => {
     return (
-        <div>
-            <Routes>
-                <Route path="/" exact element={<Home />} />
-                <Route path="/:id" exact element={<Movie />} />
-            </Routes>
+        <div className="App">
+            <Navbar />
+            <Outlet />
+            <Footer />
         </div>
     );
 };

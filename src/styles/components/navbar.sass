@@ -1,0 +1,98 @@
+// @use '../variables'
+
+// a
+//     text-decoration: none
+//     color: variables.$bg-color-tertiary
+//     transition: 0.5s
+
+// a:hover
+//     color: variables.$bg-color-secondary
+
+// #navbar
+//     display: flex
+//     justify-content: space-between
+//     align-items: center
+//     padding: 1.2rem 2rem
+//     background-color: variables.$bg-color
+
+// #navbar h2 a
+//     display: flex
+//     align-items: ceenter
+//     gap: 0.5rem
+
+// #navbar form
+//     display: flex
+//     gap: .5rem
+
+// #navbar input
+//     padding: .2rem .8rem
+//     border-radius: variables.$border-radius
+//     border: none
+
+// #navbar form button
+//     background-color: variables.$bg-color-secondary
+//     border: 2px solid variables.$bg-color-secondary
+//     border-radius: variables.$border-radius
+//     padding: .3rem
+//     font-size: 1.2rem
+//     display: flex
+//     align-items: center
+//     cursor: pointer
+//     transition: .4s
+
+// #navbar form button:hover
+//     background-color: transparent
+//     color: variables.$bg-color-tertiary
+
+@use '../variables'
+
+a
+    text-decoration: none
+    color: variables.$bg-color-tertiary
+    transition: 0.5s
+
+a:hover
+    color: variables.$bg-color-secondary
+
+#navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 1.2rem 2rem
+    background-color: variables.$bg-color
+
+    @media screen and (max-width: 768px) 
+        flex-direction: column
+        text-align: center
+
+#navbar .menu 
+    display: flex
+    align-items: center
+    gap: 0.5rem
+    
+    @media screen and (max-width: 768px)
+        margin-bottom: 1rem
+
+#navbar form
+    display: flex
+    gap: 0.5rem
+
+#navbar input
+    padding: 0.2rem 0.8rem
+    border-radius: variables.$border-radius
+    border: none
+
+#navbar form button
+    background-color: variables.$bg-color-secondary
+    border: 2px solid variables.$bg-color-secondary
+    border-radius: variables.$border-radius
+    padding: 0.3rem
+    font-size: 1.2rem
+    display: flex
+    align-items: center
+    cursor: pointer
+    transition: 0.4s
+
+#navbar form button:hover
+    background-color: transparent
+    color: variables.$bg-color-tertiary

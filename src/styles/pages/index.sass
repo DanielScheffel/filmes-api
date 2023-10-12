@@ -1,0 +1,146 @@
+// @use '../variables'
+// @use '../mixins'
+
+// .container .title
+//     color: variables.$text-color-secondary
+//     font-size: 2.5rem
+//     text-align: center
+//     margin: 2rem 0 2.5rem
+
+// .container .title:hover
+//     color: variables.$text-color
+
+// .title .query-text
+//     color: variables.$text-color-secondary
+
+// .movies-list
+//     display: flex
+//     flex-wrap: wrap
+//     justify-content: space-between
+//     padding: 2rem
+//     max-width: 1200px
+//     margin: 0 auto
+
+// .movies-list .movie
+//     width: 30%
+//     color: variables.$text-color
+//     margin-bottom: 2.5rem
+//     display: flex
+//     flex-direction: column
+//     justify-content: space-between
+//     background-color: variables.$bg-color-secondary
+//     padding: 1rem
+//     border-radius: variables.$container-border-radius
+
+// .movies-list .movie img
+//     border-radius: variables.$border-radius
+
+// .movies-list .movie img,
+// .movies-list .movie h2,
+// .movies-list .movie p
+//     margin-bottom: .5rem
+
+// .movies-list svg
+//     color: #f7d354
+
+// .movies-list .movie .buttom
+//     display: flex
+//     justify-content: center
+//     align-items: center
+
+// .movies-list .movie .btn-detalhes
+//     border: none
+//     width: 8rem
+//     height: 3em
+//     border-radius: variables.$card-border-radius
+//     background-color: variables.$body-bg-color
+//     color: variables.$text-color
+//     cursor: pointer
+//     transition: 1s ease-in
+
+
+// .movies-list .movie .btn-detalhes:hover
+//     background-color: variables.$bg-color
+//     box-shadow: variables.$box-shadow
+
+@use '../variables'
+@use '../mixins'
+
+.container .title
+    color: variables.$text-color-secondary
+    font-size: 2.5rem
+    text-align: center
+    margin: 2rem 0 2.5rem
+
+    @media screen and (max-width: 768px) 
+        font-size: 1.8rem
+    
+
+.container .title:hover
+    color: variables.$text-color
+
+.title .query-text
+    color: variables.$text-color-secondary
+
+.movies-list
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 2rem
+    max-width: 1200px
+    margin: 0 auto
+
+    @media screen and (max-width: 768px) 
+        padding: 1rem
+    
+
+.movies-list .movie
+    width: 30%
+    color: variables.$text-color
+    margin-bottom: 2.5rem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    background-color: variables.$bg-color-secondary
+    padding: 1rem
+    border-radius: variables.$container-border-radius
+
+    @media screen and (max-width: 768px) 
+        width: 100% 
+        margin-right: 0
+    
+
+.movies-list .movie img
+    border-radius: variables.$border-radius
+
+.movies-list .movie img,
+.movies-list .movie h2,
+.movies-list .movie p
+    margin-bottom: 0.5rem
+
+.movies-list svg
+    color: #f7d354
+
+.movies-list .movie .buttom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.movies-list .movie .btn-detalhes
+    border: none
+    width: 8rem
+    height: 3em
+    border-radius: variables.$card-border-radius
+    background-color: variables.$body-bg-color
+    color: variables.$text-color
+    cursor: pointer
+    transition: 1s ease-in
+
+    @media screen and (max-width: 768px) 
+        width: 6rem
+        height: 2.5em
+    
+
+.movies-list .movie .btn-detalhes:hover
+    background-color: variables.$bg-color
+    box-shadow: variables.$box-shadow

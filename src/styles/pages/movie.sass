@@ -1,0 +1,82 @@
+@use '../variables'
+
+.movie-page
+    display: flex
+    justify-content: center
+    margin: 0 auto
+    margin-bottom: 2rem
+    margin-top: 2rem
+    padding: 3rem
+    gap: 2rem
+    width: 60%
+    background: variables.$bg-color-tertiary
+    border-radius: variables.$container-border-radius
+
+    @media screen and (max-width: 768px)
+        width: 90%
+        flex-direction: column
+        align-items: center
+
+.movie-page .movie_img img
+    border-radius: variables.$border-radius
+    border: 1px solid variables.$bg-color
+
+.movie-page .movie-description h2,
+.movie-page .movie-description span,
+.movie-page .movie-description p,
+.movie-page .movie-description h3
+    margin-bottom: 1rem
+
+.movie-page .movie-description h2
+    font-size: 1.9rem
+    font-weight: bold
+    color: variables.$bg-color
+
+.movie-page .movie-description span
+    font-size: .9rem
+    font-weight: bold
+    color: variables.$bg-color
+
+.movie-page .movie-description span svg
+    color: variables.$body-bg-color
+
+.movie-page .movie-description p
+    font-weight: bold
+    color: variables.$bg-color
+
+.movie-page .movie-description p #star
+    color: #f7d354
+    margin-top: 1rem
+
+.movie-page .movie-description p #popularity
+    color: variables.$body-bg-color
+
+.movie-page .movie-description h3
+    color: variables.$bg-color
+    font-weight: bold
+
+.movie-page .movie-description h3 svg
+    color: variables.$body-bg-color
+
+.movie-page .movie-description p #text
+    line-height: 1.2em
+    font-size: .9rem
+
+.movie-page .movie-description .bottom
+    display: flex
+    justify-content: center
+    align-items: center
+
+.movie-page .movie-description .bottom .btn
+    border: none
+    width: 6rem
+    height: 2em
+    border-radius: variables.$card-border-radius
+    background-color: variables.$body-bg-color
+    color: variables.$text-color
+    cursor: pointer
+    transition: 1s ease-in
+
+.movie-page .movie-description .bottom .btn:hover
+    background-color: variables.$bg-color
+    box-shadow: variables.$box-shadow
