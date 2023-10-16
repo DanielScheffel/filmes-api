@@ -6,12 +6,8 @@ import "../styles/components/navbar.sass";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
-  const [sortOrder, setSortOrder] = useState("desc");
   const navigate = useNavigate();
 
-  const handleSortOrderChange = (e) => {
-    setSortOrder(e.target.value);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,16 +21,17 @@ const Navbar = () => {
   return (
     <nav id="navbar">
       <div className="menu">
+        <div className="nav-items">
         <h2>
           <Link to="/">
             <BiCameraMovie />
             Movies
           </Link>
         </h2>
-        <select value={sortOrder} onChange={handleSortOrderChange}>
-          <option value="desc">Do maior pro menor</option>
-          <option value="asc">Do menor pro maior</option>
-        </select>
+          <ul className="nav-list">
+            <Link to="/favoritos"><li className="nav-item">Favoritos</li></Link>
+          </ul>
+        </div>
       </div>
       <form onSubmit={handleSubmit}>
         <input

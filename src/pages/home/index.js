@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 
 import CardMovie from "../../components/CardMovie";
 
@@ -8,6 +7,7 @@ import "../../styles/pages/index.sass";
 function Home() {
   const [movies, setMovies] = useState([]);
   const KEY = process.env.REACT_APP_KEY;
+
   useEffect(() => {
     fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=pt-BR`

@@ -1,68 +1,3 @@
-// @use '../variables'
-// @use '../mixins'
-
-// .container .title
-//     color: variables.$text-color-secondary
-//     font-size: 2.5rem
-//     text-align: center
-//     margin: 2rem 0 2.5rem
-
-// .container .title:hover
-//     color: variables.$text-color
-
-// .title .query-text
-//     color: variables.$text-color-secondary
-
-// .movies-list
-//     display: flex
-//     flex-wrap: wrap
-//     justify-content: space-between
-//     padding: 2rem
-//     max-width: 1200px
-//     margin: 0 auto
-
-// .movies-list .movie
-//     width: 30%
-//     color: variables.$text-color
-//     margin-bottom: 2.5rem
-//     display: flex
-//     flex-direction: column
-//     justify-content: space-between
-//     background-color: variables.$bg-color-secondary
-//     padding: 1rem
-//     border-radius: variables.$container-border-radius
-
-// .movies-list .movie img
-//     border-radius: variables.$border-radius
-
-// .movies-list .movie img,
-// .movies-list .movie h2,
-// .movies-list .movie p
-//     margin-bottom: .5rem
-
-// .movies-list svg
-//     color: #f7d354
-
-// .movies-list .movie .buttom
-//     display: flex
-//     justify-content: center
-//     align-items: center
-
-// .movies-list .movie .btn-detalhes
-//     border: none
-//     width: 8rem
-//     height: 3em
-//     border-radius: variables.$card-border-radius
-//     background-color: variables.$body-bg-color
-//     color: variables.$text-color
-//     cursor: pointer
-//     transition: 1s ease-in
-
-
-// .movies-list .movie .btn-detalhes:hover
-//     background-color: variables.$bg-color
-//     box-shadow: variables.$box-shadow
-
 @use '../variables'
 @use '../mixins'
 
@@ -118,8 +53,30 @@
 .movies-list .movie p
     margin-bottom: 0.5rem
 
-.movies-list svg
+.movies-list .movie .icons
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.movies-list .movie .icons #avaliation svg
     color: #f7d354
+    font-size: 1.2em
+
+.movies-list .movie .icons #favorite
+    color: #ff0000
+    font-size: 1.2em
+    background-color: #00000050
+    padding: 5px
+    border-radius: variables.$border-radius
+    width: 30px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+
+.movies-list .movie .icons #favorite:hover
+    background-color: #000000
+    cursor: pointer
 
 .movies-list .movie .buttom
     display: flex
