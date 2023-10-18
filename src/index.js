@@ -7,7 +7,7 @@ import Home from "./pages/home/index";
 import Movie from "./pages/movie/index";
 import Search from "./pages/search/search";
 import Favorite from "./pages/favorites/favorite";
-import FavoritesProvider from "./contexts/Favorites";
+// import FavoritosProvider from "./contexts/Favorites";
 
 import "./styles/main.sass";
 
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <FavoritesProvider>
+      {/* <FavoritosProvider> */}
         <Routes>
           <Route element={<App />}>
             <Route path="/" element={<Home />} />
@@ -24,7 +24,7 @@ root.render(
             <Route path="/favoritos" element={<Favorite />} />
           </Route>
         </Routes>
-      </FavoritesProvider>
+      {/* </FavoritosProvider> */}
     </BrowserRouter>
   </React.StrictMode>
 );
