@@ -1,28 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { FaStar, FaRegHeart, FaHeart } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const CardMovie = ({ movie, showLink = true }) => {
   const imagePath = "https://image.tmdb.org/t/p/w300";
-
-  const [favoritos, setFavoritos] = useState([]);
-
-  useEffect(() => {
-    const storedFavoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-    setFavoritos(storedFavoritos);
-  }, []);
-
-  const toggleFavorito = () => {
-    if (favoritos.some((fav) => fav.id === movie.id)) {
-      const updatedFavoritos = favoritos.filter((fav) => fav.id !== movie.id);
-      setFavoritos(updatedFavoritos);
-      localStorage.setItem("favoritos", JSON.stringify(updatedFavoritos));
-    } else {
-      const updatedFavoritos = [...favoritos, movie];
-      setFavoritos(updatedFavoritos);
-      localStorage.setItem("favoritos", JSON.stringify(updatedFavoritos));
-    }
-  };
 
   return (
     <div className="movie">
@@ -32,12 +13,6 @@ const CardMovie = ({ movie, showLink = true }) => {
         <p id="avaliation">
           <FaStar /> {movie.vote_average}
         </p>
-        <button id="favorite" onClick={() => toggleFavorito(movie)}>
-          {favoritos.some((fav) => fav.id === movie.id)
-            ? <FaHeart />
-            : <FaRegHeart />
-          }
-        </button>
       </div>
       <div className="buttom">
         {showLink && (

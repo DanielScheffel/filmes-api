@@ -28,9 +28,6 @@ const Navbar = () => {
             Movies
           </Link>
         </h2>
-          <ul className="nav-list">
-            <Link to="/favoritos"><li className="nav-item">Favoritos</li></Link>
-          </ul>
         </div>
       </div>
       <form onSubmit={handleSubmit}>
