@@ -6,6 +6,7 @@ import App from "./App";
 import Home from "./pages/home/index";
 import Movie from "./pages/movie/index";
 import Search from "./pages/search/search";
+import Favoritos from "./pages/favoritos/favoritos";
 
 import "./styles/main.sass";
 
@@ -18,6 +19,7 @@ root.render(
             <Route path="/" element={<Home />} />
             <Route path="filme/:id" element={<Movie />} />
             <Route path="Search" element={<Search />} />
+            <Route path="/favoritos" element={<Favoritos />} />
           </Route>
         </Routes>
     </BrowserRouter>

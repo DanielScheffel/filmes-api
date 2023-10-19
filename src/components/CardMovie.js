@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
+import { FaStar, FaHeart, FaRegHeart } from "react-icons/fa";
 
 const CardMovie = ({ movie, showLink = true }) => {
   const imagePath = "https://image.tmdb.org/t/p/w300";
+
+  const isFavorito = localStorage.getItem(`favorito_${movie.id}`);
+
+  const [isInFavorito, setIsInFavorito] = useState(isFavorito);
+
+  const toggleFavorito = () => {
+    if(isInFavorito){
+      localStorage.removeItem(`favorito_${movie.id}`);
+      setIsInFavorito(false)
+    } else {
+      localStorage.setItem(`favorito_${movie.id}`, JSON.stringify(movie));
+      setIsInFavorito(true)
+    }
+  }
 
   return (
     <div className="movie">
@@ -13,6 +27,9 @@ const CardMovie = ({ movie, showLink = true }) => {
         <p id="avaliation">
           <FaStar /> {movie.vote_average}
         </p>
+        <button id="favorite" onClick={toggleFavorito}>
+          {isInFavorito ? <FaHeart /> : <FaRegHeart />}
+        </button>
       </div>
       <div className="buttom">
         {showLink && (

@@ -16,10 +16,13 @@ a:hover
     background-color: variables.$bg-color
 
     @media screen and (max-width: 768px)
+        // display: flex
+        // justify-content: center
+        // gap: .7rem
         flex-direction: column
         text-align: center
 
-#navbar .menu .nav-items
+#navbar .menu .nav-items .items
     display: flex
     align-items: center
     gap: .9rem
@@ -38,6 +41,9 @@ a:hover
 #navbar form
     display: flex
     gap: .5rem
+
+    @media screen and (max-width: 768px)
+        margin-top: 1rem
 
 #navbar input
     padding:0.2rem .8rem
@@ -58,11 +64,3 @@ a:hover
 #navbar form button:hover
     background-color: transparent
     color: variables.$bg-color-tertiary
-
-#navbar .nav-items .nav-list
-        display: flex
-        align-items: center
-        gap: .9rem
-        list-style-type: none
-        font-size: 1.2rem
-        font-weight: bold

@@ -8,7 +8,6 @@ const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -22,12 +21,19 @@ const Navbar = () => {
     <nav id="navbar">
       <div className="menu">
         <div className="nav-items">
-        <h2>
-          <Link to="/">
-            <BiCameraMovie />
-            Movies
-          </Link>
-        </h2>
+          <div className="items">
+            <h2>
+              <Link to="/">
+                <BiCameraMovie />
+                Movies
+              </Link>
+            </h2>
+            <ul className="nav-list">
+              <Link to="/favoritos">
+                <li className="nav-item">Favoritos</li>
+              </Link>
+            </ul>
+          </div>
         </div>
       </div>
       <form onSubmit={handleSubmit}>
