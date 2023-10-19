@@ -8,7 +8,7 @@ import "../../styles/pages/movie.sass";
 
 const Movie = () => {
   const { id } = useParams();
-  const imagePath = "https://image.tmdb.org/t/p/w300";
+  const imagePath = "https://image.tmdb.org/t/p/original";
 
   const [movie, setMovie] = useState([]);
   const KEY = process.env.REACT_APP_KEY;

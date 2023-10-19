@@ -7,9 +7,11 @@ const favoritos = () => {
     .filter(key => key.startsWith('favorito_'))
     .map(key => JSON.parse(localStorage.getItem(key)));
 
+    const numeroDeMovies = favoritosMovies.length;
+
   return (
     <div className="container">
-        <h2 className="title">Meus Favoritos:</h2>
+        <h2 className="title">Meus Favoritos: {numeroDeMovies}</h2>
         <div className="movies-list">
             {favoritosMovies.length > 0 ? (
                 favoritosMovies.map((movie) => <CardMovie key={movie.id} movie={movie} />)

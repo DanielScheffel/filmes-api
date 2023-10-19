@@ -4,6 +4,7 @@ import CardMovie from "../../components/CardMovie";
 
 import "../../styles/pages/index.sass";
 
+
 function Home() {
   const [movies, setMovies] = useState([]);
   const KEY = process.env.REACT_APP_KEY;

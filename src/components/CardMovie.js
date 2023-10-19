@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaStar, FaHeart, FaRegHeart } from "react-icons/fa";
 
 const CardMovie = ({ movie, showLink = true }) => {
-  const imagePath = "https://image.tmdb.org/t/p/w300";
+  const imagePath = "https://image.tmdb.org/t/p/original";
 
   const isFavorito = localStorage.getItem(`favorito_${movie.id}`);
 
