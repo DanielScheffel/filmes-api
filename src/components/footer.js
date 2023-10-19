@@ -10,9 +10,8 @@ import "../styles/components/footer.sass";
 
 const Footer = () => {
   const urlGithub = "https://www.github.com/DanielScheffel";
-  const urlGoogle = "https://www.google.com";
-  const urlInstagram = "https://www.instagram.com";
-  const urlLinkedin = "https://www.linkedin.com/";
+  const urlInstagram = "https://www.instagram.com/o_scheffel.04/";
+  const urlLinkedin = "https://www.linkedin.com/in/daniel-scheffel-de-oliveira-0a4135259/";
 
   return (
     <div className="footer">
@@ -20,9 +19,6 @@ const Footer = () => {
       <div className="social">
         <a href={urlGithub} target="_blank" rel="noopener noreferrer">
           <SlSocialGithub className="github" />
-        </a>
-        <a href={urlGoogle} target="_blank" rel="noopener noreferrer">
-          <SlSocialGoogle className="github" />
         </a>
         <a href={urlInstagram} target="_blank" rel="noopener noreferrer">
           <SlSocialInstagram className="github" />
